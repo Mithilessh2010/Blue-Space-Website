@@ -129,7 +129,7 @@ export default function Hero() {
           <div className="flex flex-col">
             {[0, 1].map((row) => (
               <div key={row} className="flex flex-wrap">
-                {titleLetters.slice(row * titleSplit, (row + 1) * titleSplit).map((letter, i) => (
+                {titleLetters.slice(row * titleSplit, row === 1 ? undefined : (row + 1) * titleSplit).map((letter, i) => (
                   <motion.span
                     key={`${row}-${i}`}
                     initial={{ y: 120, opacity: 0 }}
