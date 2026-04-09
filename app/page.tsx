@@ -7,6 +7,7 @@ import WhyAttend from "@/components/WhyAttend";
 import Sponsors from "@/components/Sponsors";
 import Venue from "@/components/Venue";
 import FAQ from "@/components/FAQ";
+import Organizers from "@/components/Organizers";
 import Footer from "@/components/Footer";
 import AdminTrigger from "@/components/AdminTrigger";
 import PasscodeModal from "@/components/PasscodeModal";
@@ -31,6 +32,7 @@ export default function Home() {
       <Sponsors />
       <Venue />
       <FAQ />
+      <Organizers />
       <Footer onAdminTrigger={() => setShowPasscode(true)} />
 
       <AdminTrigger onTrigger={() => setShowPasscode(true)} />
