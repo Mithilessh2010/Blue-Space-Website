@@ -1,23 +1,21 @@
-<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <clipPath id="circleMask">
-      <circle cx="96" cy="96" r="92"/>
-    </clipPath>
+    <mask id="circleMask">
+      <circle cx="96" cy="96" r="92" fill="white"/>
+    </mask>
   </defs>
 
-  <!-- Circular border background -->
-  <circle cx="96" cy="96" r="92" fill="#050810"/>
-
-  <!-- Galaxy image clipped to circle -->
+  <!-- Galaxy image with circular mask -->
   <image
     href="/images/galaxy.png"
     x="4"
     y="4"
     width="184"
     height="184"
-    clip-path="url(#circleMask)"
+    mask="url(#circleMask)"
+    preserveAspectRatio="xMidYMid slice"
   />
 
-  <!-- Border circle -->
-  <circle cx="96" cy="96" r="92" fill="none" stroke="#4A70A9" stroke-width="2" opacity="0.6"/>
+  <!-- Subtle border -->
+  <circle cx="96" cy="96" r="92" fill="none" stroke="#4A70A9" stroke-width="1.5" opacity="0.5"/>
 </svg>
