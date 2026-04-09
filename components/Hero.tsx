@@ -237,7 +237,7 @@ export default function Hero() {
             className="group px-8 py-4 rounded-full font-semibold text-base text-cream/80 hover:text-cream border border-cream/20 hover:border-blue-light/50 transition-all duration-300 hover:bg-blue-mid/10"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
-            Sign Up
+            Apply Now
           </a>
         </motion.div>
 

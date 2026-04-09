@@ -10,7 +10,7 @@ const sponsors = [
     name: "Quantum Robotics",
     tier: "gold",
     logo: "/images/quantum.jpg",
-    url: "https://quantumrobotics.com",
+    url: "https://quantum-robotics.ai/",
     bg: "white",
   },
   {
