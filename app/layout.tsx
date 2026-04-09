@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "A one-day hardware + software hackathon at Zoho Corporation, Pleasanton CA. April 19. Free to attend. Build cool things, meet people, get PCB coupons.",
   icons: {
-    icon: "/images/galaxy.png",
+    icon: "/favicon.svg",
   },
   openGraph: {
     title: "Blue Space Hackathon",
