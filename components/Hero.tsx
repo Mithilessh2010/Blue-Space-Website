@@ -223,7 +223,7 @@ export default function Hero() {
               }}
             />
             <span className="relative text-space-900 flex items-center gap-2">
-              Apply Now
+              Join Discord
               <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -231,11 +231,13 @@ export default function Hero() {
           </a>
 
           <a
-            href="#about"
+            href="https://blueprint.hackclub.com/guilds/invite/dublin"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group px-8 py-4 rounded-full font-semibold text-base text-cream/80 hover:text-cream border border-cream/20 hover:border-blue-light/50 transition-all duration-300 hover:bg-blue-mid/10"
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
-            Learn more
+            Sign Up
           </a>
         </motion.div>
 
@@ -249,8 +251,8 @@ export default function Hero() {
           {[
             { value: "100%", label: "Free" },
             { value: "1 Day", label: "Hackathon" },
-            { value: "∞", label: "Workshops" },
-            { value: "Free PCBs", label: "For all" },
+            { value: "many", label: "Workshops" },
+            { value: "PCB coupons", label: "For all" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col">
               <span
