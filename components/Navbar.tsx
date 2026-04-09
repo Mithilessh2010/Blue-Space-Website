@@ -63,7 +63,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://discord.gg/TNjUjYkB3"
+            href="https://blueprint.hackclub.com/guilds/invite/dublin"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-glow relative px-5 py-2 rounded-full text-sm font-semibold text-cream border border-blue-mid/60 hover:border-blue-light/80 bg-blue-mid/10 hover:bg-blue-mid/20 transition-all duration-300 hover:shadow-glow-blue"
@@ -111,7 +111,7 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="https://discord.gg/TNjUjYkB3"
+                href="https://blueprint.hackclub.com/guilds/invite/dublin"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ x: -20, opacity: 0 }}
