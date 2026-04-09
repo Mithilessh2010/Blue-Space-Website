@@ -55,7 +55,7 @@ export default function Footer({ onAdminTrigger }: { onAdminTrigger: () => void 
               One day. Endless builds. Come launch something.
             </p>
             <a
-              href="https://discord.gg/TNjUjYkB3"
+              href="https://blueprint.hackclub.com/guilds/invite/dublin"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-10 py-4 rounded-full font-bold text-lg overflow-hidden"
@@ -76,7 +76,7 @@ export default function Footer({ onAdminTrigger }: { onAdminTrigger: () => void 
                 }}
               />
               <span className="relative text-space-900 flex items-center gap-2">
-                Register on Discord
+                Register
                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

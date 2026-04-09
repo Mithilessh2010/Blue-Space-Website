@@ -251,7 +251,7 @@ export default function Hero() {
           {[
             { value: "100%", label: "Free" },
             { value: "1 Day", label: "Hackathon" },
-            { value: "many", label: "Workshops" },
+            { value: "Many", label: "Workshops" },
             { value: "PCB coupons", label: "For all" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col">
