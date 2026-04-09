@@ -4,37 +4,31 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: "⚡",
     title: "Learn Hardware",
     description: "From resistors to microcontrollers — hands-on workshops guide you through the fundamentals of hardware engineering.",
     accent: "#4A70A9",
   },
   {
-    icon: "🤝",
     title: "Meet Your People",
     description: "Connect with like-minded builders, engineers, and creators. The friendships you make here last beyond the event.",
     accent: "#8FABD4",
   },
   {
-    icon: "🚀",
     title: "Build Cool Stuff",
     description: "Ship real projects. From robots to IoT devices to full-stack apps — if you can dream it, you can build it here.",
     accent: "#4A70A9",
   },
   {
-    icon: "🎓",
     title: "Expert Workshops",
     description: "Level up with structured workshops from experienced mentors covering PCB design, embedded systems, and more.",
     accent: "#8FABD4",
   },
   {
-    icon: "🔲",
     title: "Free PCB Coupons",
     description: "Every participant gets free PCB manufacturing coupons from EasyEDA. Build your board — then actually ship it.",
     accent: "#4A70A9",
   },
   {
-    icon: "🎟",
     title: "Completely Free",
     description: "Zero cost. No tickets, no hidden fees. We provide food, materials, and everything you need to build.",
     accent: "#8FABD4",
@@ -125,9 +119,6 @@ export default function WhyAttend() {
                 className="absolute top-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{ background: `linear-gradient(90deg, transparent, ${feature.accent}, transparent)` }}
               />
-
-              {/* Icon */}
-              <div className="text-4xl mb-5">{feature.icon}</div>
 
               {/* Content */}
               <h3

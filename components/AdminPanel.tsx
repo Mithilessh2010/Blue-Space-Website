@@ -16,11 +16,11 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
   const [deployStatus, setDeployStatus] = useState<"idle" | "running" | "success">("idle");
   const [saved, setSaved] = useState(false);
 
-  const tabs: { id: Tab; label: string; icon: string }[] = [
-    { id: "event", label: "Event Info", icon: "📋" },
-    { id: "sponsors", label: "Sponsors", icon: "🏷" },
-    { id: "faqs", label: "FAQs", icon: "❓" },
-    { id: "deploy", label: "Deploy", icon: "🚀" },
+  const tabs: { id: Tab; label: string }[] = [
+    { id: "event", label: "Event Info" },
+    { id: "sponsors", label: "Sponsors" },
+    { id: "faqs", label: "FAQs" },
+    { id: "deploy", label: "Deploy" },
   ];
 
   const handleSave = () => {
@@ -161,7 +161,7 @@ export default function AdminPanel({ onClose }: { onClose: () => void }) {
               }`}
               style={{ fontFamily: "'Space Mono', monospace" }}
             >
-              {tab.icon} {tab.label}
+              {tab.label}
             </button>
           ))}
         </div>

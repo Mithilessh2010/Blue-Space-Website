@@ -5,7 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import StarField from "./StarField";
 
-const titleLetters = "BLUE SPACE".split("");
+const titleLetters = "BLUESPACE".split("");
+const titleSplit = 4; // "BLUE" is 4 characters
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -125,30 +126,32 @@ export default function Hero() {
 
         {/* BLUE SPACE title - staggered letters */}
         <div className="overflow-hidden mb-4">
-          <div className="flex flex-wrap">
-            {titleLetters.map((letter, i) => (
-              <motion.span
-                key={i}
-                initial={{ y: 120, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{
-                  delay: 0.4 + i * 0.045,
-                  duration: 0.8,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className={`glitch-text text-[clamp(3.5rem,10vw,9rem)] font-extrabold leading-none tracking-tighter ${
-                  letter === " " ? "w-[0.25em]" : ""
-                }`}
-                style={{
-                  fontFamily: "'Syne', sans-serif",
-                  color: "#EFECE3",
-                  textShadow:
-                    "0 0 80px rgba(74,112,169,0.6), 0 0 160px rgba(74,112,169,0.3)",
-                  animationDelay: `${i * 0.8}s`,
-                }}
-              >
-                {letter === " " ? "\u00A0" : letter}
-              </motion.span>
+          <div className="flex flex-col">
+            {[0, 1].map((row) => (
+              <div key={row} className="flex flex-wrap">
+                {titleLetters.slice(row * titleSplit, (row + 1) * titleSplit).map((letter, i) => (
+                  <motion.span
+                    key={`${row}-${i}`}
+                    initial={{ y: 120, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      delay: 0.4 + (row * titleSplit + i) * 0.045,
+                      duration: 0.8,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="glitch-text text-[clamp(3.5rem,10vw,9rem)] font-extrabold leading-none tracking-tighter"
+                    style={{
+                      fontFamily: "'Syne', sans-serif",
+                      color: "#EFECE3",
+                      textShadow:
+                        "0 0 80px rgba(74,112,169,0.6), 0 0 160px rgba(74,112,169,0.3)",
+                      animationDelay: `${(row * titleSplit + i) * 0.8}s`,
+                    }}
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </div>
             ))}
           </div>
         </div>

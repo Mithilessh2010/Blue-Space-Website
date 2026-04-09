@@ -201,7 +201,7 @@ export default function Footer({ onAdminTrigger }: { onAdminTrigger: () => void 
               className="text-cream/20 text-xs"
               style={{ fontFamily: "'Space Mono', monospace" }}
             >
-              Built with ♥ for builders
+              Built for builders
             </span>
             {/* Hidden admin trigger — subtle period */}
             <button

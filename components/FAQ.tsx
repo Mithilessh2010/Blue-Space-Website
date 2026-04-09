@@ -163,7 +163,6 @@ export default function FAQ() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-16 glass-card rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 border-blue-mid/20"
         >
-          <div className="text-4xl">💬</div>
           <div className="flex-1 text-center sm:text-left">
             <h3
               className="text-cream font-bold text-lg mb-1"

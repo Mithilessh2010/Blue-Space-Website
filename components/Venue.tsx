@@ -122,16 +122,15 @@ export default function Venue() {
             {/* Date & time info */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: "📅", label: "Date", value: "April 19, 2025" },
-                { icon: "⏰", label: "Time", value: "9:00 AM — 6:00 PM" },
-                { icon: "🚗", label: "Parking", value: "Free on-site" },
-                { icon: "🍕", label: "Food", value: "Provided all day" },
+                { label: "Date", value: "April 19, 2025" },
+                { label: "Time", value: "9:00 AM — 6:00 PM" },
+                { label: "Parking", value: "Free on-site" },
+                { label: "Food", value: "Provided all day" },
               ].map((info) => (
                 <div
                   key={info.label}
                   className="glass-card rounded-xl p-4"
                 >
-                  <div className="text-xl mb-2">{info.icon}</div>
                   <p className="text-cream/40 text-xs tracking-widest uppercase mb-1" style={{ fontFamily: "'Space Mono', monospace" }}>
                     {info.label}
                   </p>
