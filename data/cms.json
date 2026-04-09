@@ -1,0 +1,92 @@
+{
+  "event": {
+    "name": "Blue Space",
+    "tagline": "Hardware + Software Hackathon",
+    "date": "April 19, 2025",
+    "location": "Zoho Corporation — Pleasanton, CA",
+    "address": "4141 Hacienda Dr, Pleasanton, CA 94588",
+    "discord": "https://discord.gg/TNjUjYkB3",
+    "applyUrl": "https://discord.gg/TNjUjYkB3",
+    "contactEmail": "ro.devnani@gmail.com",
+    "description": "Blue Space is a one-day hardware + software hackathon where students come together to build, learn, and connect. Whether you're a seasoned engineer or picking up a soldering iron for the first time, there's a place for you here."
+  },
+  "sponsors": [
+    {
+      "id": "1",
+      "name": "Quantum Robotics",
+      "tier": "gold",
+      "logo": "/images/quantum.jpg",
+      "url": "https://quantumrobotics.com"
+    },
+    {
+      "id": "2",
+      "name": "EasyEDA",
+      "tier": "gold",
+      "logo": "/images/easyeda.jpg",
+      "url": "https://easyeda.com"
+    },
+    {
+      "id": "3",
+      "name": "Featherless.ai",
+      "tier": "silver",
+      "logo": "/images/featherless.jpeg",
+      "url": "https://featherless.ai"
+    },
+    {
+      "id": "4",
+      "name": "Zoho",
+      "tier": "venue",
+      "logo": "/images/zoho.png",
+      "url": "https://zoho.com"
+    },
+    {
+      "id": "5",
+      "name": "Hack Club",
+      "tier": "community",
+      "logo": "/images/hackclub.png",
+      "url": "https://hackclub.com"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "1",
+      "question": "Who can attend Blue Space?",
+      "answer": "Any student in middle school or high school is welcome! No experience required — we have workshops for all skill levels."
+    },
+    {
+      "id": "2",
+      "question": "Is it really free?",
+      "answer": "100% free. No registration fee, no hidden costs. We even provide food and materials."
+    },
+    {
+      "id": "3",
+      "question": "Do I need hardware experience?",
+      "answer": "Not at all! We have beginner-friendly workshops covering everything from basic circuits to PCB design. You'll leave knowing more than you came in with."
+    },
+    {
+      "id": "4",
+      "question": "What should I bring?",
+      "answer": "Bring your laptop, a charger, and your curiosity. We'll provide hardware components, soldering stations, and all the tools you need."
+    },
+    {
+      "id": "5",
+      "question": "What are the PCB coupons?",
+      "answer": "Every participant receives free PCB manufacturing coupons courtesy of EasyEDA — so you can actually build and ship your project after the event."
+    },
+    {
+      "id": "6",
+      "question": "Can I come alone?",
+      "answer": "Absolutely. Most people come solo and form teams on the day. Our community vibe means you'll make friends fast."
+    },
+    {
+      "id": "7",
+      "question": "Where exactly is the venue?",
+      "answer": "Zoho Corporation, 4141 Hacienda Dr, Pleasanton, CA 94588. Parking is available on site."
+    },
+    {
+      "id": "8",
+      "question": "How do I stay updated?",
+      "answer": "Join our Discord server at discord.gg/TNjUjYkB3 for real-time announcements, team formation, and pre-event workshops."
+    }
+  ]
+}
