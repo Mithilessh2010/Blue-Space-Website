@@ -38,12 +38,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#top" className="flex items-center gap-3 group">
-          <div className="relative w-8 h-8">
+          <div className="relative w-8 h-8 rounded-full overflow-hidden border border-blue-light/40 group-hover:border-blue-light/60 transition-all duration-300">
             <Image
               src="/images/galaxy.png"
               alt="Blue Space Logo"
               fill
-              className="object-contain"
+              className="object-cover"
             />
           </div>
           <span
