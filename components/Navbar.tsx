@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
   { label: "About", href: "#about" },
@@ -38,10 +39,12 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#top" className="flex items-center gap-3 group">
           <div className="relative w-8 h-8">
-            <div className="absolute inset-0 rounded-full bg-blue-mid/30 group-hover:bg-blue-mid/50 transition-all duration-300 blur-sm" />
-            <div className="relative w-8 h-8 rounded-full border border-blue-light/40 flex items-center justify-center">
-              <span className="text-xs font-bold text-blue-light" style={{ fontFamily: "'Space Mono', monospace" }}>BS</span>
-            </div>
+            <Image
+              src="/images/galaxy.png"
+              alt="Blue Space Logo"
+              fill
+              className="object-contain"
+            />
           </div>
           <span
             className="text-cream font-bold text-lg tracking-tight"
