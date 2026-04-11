@@ -45,6 +45,14 @@ const sponsors = [
     url: "https://hackclub.com",
     bg: "dark",
   },
+  {
+    id: "generationxyz",
+    name: "Generation XYZ",
+    tier: "gold",
+    logo: "/xyz-logo-color.png",
+    url: "https://gen.xyz/",
+    bg: "dark",
+  },
 ];
 
 const tierConfig: Record<string, { label: string; color: string; glow: string }> = {

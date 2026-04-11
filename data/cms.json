@@ -45,6 +45,13 @@
       "tier": "community",
       "logo": "/images/hackclub.png",
       "url": "https://hackclub.com"
+    },
+    {
+      "id": "6",
+      "name": "Generation XYZ",
+      "tier": "gold",
+      "logo": "/xyz-logo-color.png",
+      "url": "https://gen.xyz/"
     }
   ],
   "faqs": [
@@ -71,7 +78,7 @@
     {
       "id": "5",
       "question": "What are the PCB coupons?",
-      "answer": "Every participant receives free PCB manufacturing coupons courtesy of EasyEDA — so you can actually build and ship your project after the event."
+      "answer": "Every participant receives free PCB manufacturing coupons courtesy of EasyEDA, plus a free domain from Generation XYZ so you can launch your project after the event."
     },
     {
       "id": "6",
