@@ -16,7 +16,7 @@ const sponsors = [
   {
     id: "easyeda",
     name: "EasyEDA",
-    tier: "gold",
+    tier: "silver",
     logo: "/images/easyeda.jpg",
     url: "https://easyeda.com",
     bg: "white",
@@ -97,7 +97,7 @@ const sponsors = [
   {
     id: "generationxyz",
     name: "Generation XYZ",
-    tier: "gold",
+    tier: "silver",
     logo: "/images/xyz-logo-color.png",
     url: "https://gen.xyz/",
     bg: "dark",
