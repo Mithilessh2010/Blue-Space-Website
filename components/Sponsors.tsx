@@ -55,6 +55,51 @@ const sponsors = [
   },
 ];
 
+const partnerLinks = [
+  {
+    id: "nordvpn",
+    name: "NordVPN",
+    logo: "/images/NordVPN_Logo_RGB_Primary_White (2).png",
+    url: "https://nordvpn.com/hackathons",
+    bg: "dark",
+  },
+  {
+    id: "nordpass",
+    name: "NordPass",
+    logo: "/images/NordPass-white-horizontal (2).png",
+    url: "https://nordpass.com/",
+    bg: "dark",
+  },
+  {
+    id: "incogni",
+    name: "Incogni",
+    logo: "/images/Incogni_logo_white_better_quality.png",
+    url: "https://incogni.com/",
+    bg: "dark",
+  },
+  {
+    id: "saily",
+    name: "Saily",
+    logo: "/images/saily-logo-white (3).png",
+    url: "https://saily.com/",
+    bg: "dark",
+  },
+  {
+    id: "nordprotect",
+    name: "NordProtect",
+    logo: "/images/Color=Orange, Type=Horizontal, On=White.png",
+    url: "https://nordprotect.com/",
+    bg: "dark",
+  },
+  {
+    id: "nexosai",
+    name: "Nexos.ai",
+    logo: "/images/nexos-ai-logo-MAIN-white-horizontal.png",
+    url: "https://nexos.ai/",
+    bg: "dark",
+  },
+];
+
 const tierConfig: Record<string, { label: string; color: string; glow: string }> = {
   gold: { label: "Gold Sponsor", color: "#F5C842", glow: "rgba(245,200,66,0.25)" },
   silver: { label: "Silver Sponsor", color: "#8FABD4", glow: "rgba(143,171,212,0.25)" },
@@ -175,6 +220,31 @@ export default function Sponsors() {
                 onHover={setHoveredId}
               />
             ))}
+        </div>
+
+        {/* Partner Links Section */}
+        <div className="mt-24">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-xs text-blue-mid/60 tracking-[0.3em] uppercase mb-8 flex items-center gap-3"
+            style={{ fontFamily: "'Space Mono', monospace" }}
+          >
+            <span className="w-4 h-px bg-blue-mid/40" />
+            Partner Links
+          </motion.p>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {partnerLinks.map((partner, i) => (
+              <PartnerLinkCard
+                key={partner.id}
+                partner={partner}
+                index={i}
+                hovered={hoveredId === partner.id}
+                onHover={setHoveredId}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Become a sponsor CTA */}
@@ -300,6 +370,65 @@ function SponsorCard({
       <div
         className="absolute bottom-0 left-0 right-0 h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
         style={{ background: `linear-gradient(90deg, ${tier.color}, transparent)` }}
+      />
+    </motion.a>
+  );
+}
+
+function PartnerLinkCard({
+  partner,
+  index,
+  hovered,
+  onHover,
+}: {
+  partner: (typeof partnerLinks)[0];
+  index: number;
+  hovered: boolean;
+  onHover: (id: string | null) => void;
+}) {
+  return (
+    <motion.a
+      href={partner.url}
+      target="_blank"
+      rel={partner.id === "nordvpn" ? "noopener noreferrer nofollow sponsored" : "noopener noreferrer"}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.08, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -4, scale: 1.01 }}
+      onHoverStart={() => onHover(partner.id)}
+      onHoverEnd={() => onHover(null)}
+      className="group relative glass-card rounded-xl overflow-hidden cursor-pointer block p-4"
+      style={{
+        boxShadow: hovered ? "0 0 30px rgba(143,171,212,0.2)" : "none",
+        transition: "box-shadow 0.4s ease",
+        border: hovered
+          ? "1px solid rgba(143,171,212,0.4)"
+          : "1px solid rgba(74,112,169,0.15)",
+      }}
+    >
+      {/* Logo */}
+      <div className="relative mx-auto h-12 w-24 mb-3 transition-all duration-300 group-hover:scale-105">
+        <Image
+          src={partner.logo}
+          alt={partner.name}
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      {/* Name */}
+      <p
+        className="text-center font-semibold text-cream/80 group-hover:text-cream transition-colors duration-300 text-sm"
+        style={{ fontFamily: "'Syne', sans-serif" }}
+      >
+        {partner.name}
+      </p>
+
+      {/* Bottom accent bar */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+        style={{ background: "linear-gradient(90deg, rgba(143,171,212,0.6), transparent)" }}
       />
     </motion.a>
   );
