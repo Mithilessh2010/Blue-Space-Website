@@ -60,7 +60,7 @@ const sponsors = [
     tier: "gold",
     logo: "/images/Color=Orange, Type=Horizontal, On=White.png",
     url: "https://nordprotect.com/",
-    bg: "dark",
+    bg: "white",
   },
   {
     id: "nexosai",
