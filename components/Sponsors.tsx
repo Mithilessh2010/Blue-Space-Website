@@ -98,7 +98,7 @@ const sponsors = [
     id: "generationxyz",
     name: "Generation XYZ",
     tier: "gold",
-    logo: "/xyz-logo-color.png",
+    logo: "/images/xyz-logo-color.png",
     url: "https://gen.xyz/",
     bg: "dark",
   },
