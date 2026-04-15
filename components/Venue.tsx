@@ -122,7 +122,7 @@ export default function Venue() {
             {/* Date & time info */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Date", value: "April 19, 2025" },
+                { label: "Date", value: "May 16, 2025" },
                 { label: "Time", value: "9:00 AM — 6:00 PM" },
                 { label: "Parking", value: "Free on-site" },
                 { label: "Food", value: "Provided all day" },

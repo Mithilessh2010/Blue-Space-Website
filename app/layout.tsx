@@ -4,13 +4,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Blue Space — Hardware + Software Hackathon",
   description:
-    "A one-day hardware + software hackathon at Zoho Corporation, Pleasanton CA. April 19. Free to attend. Build cool things, meet people, get PCB coupons.",
+    "A one-day hardware + software hackathon at Zoho Corporation, Pleasanton CA. May 16. Free to attend. Build cool things, meet people, get PCB coupons.",
   icons: {
     icon: "/images/tablogo.png",
   },
   openGraph: {
     title: "Blue Space Hackathon",
-    description: "Build Guilds presents Blue Space — April 19 at Zoho Corporation, Pleasanton CA",
+    description: "Build Guilds presents Blue Space — May 16 at Zoho Corporation, Pleasanton CA",
     images: ["/images/poster.png"],
   },
 };
