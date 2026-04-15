@@ -194,7 +194,7 @@ export default function Footer({ onAdminTrigger }: { onAdminTrigger: () => void 
             className="text-cream/25 text-xs"
             style={{ fontFamily: "'Space Mono', monospace" }}
           >
-            © 2025 Blue Space Hackathon. All rights reserved.
+            © 2026 Blue Space Hackathon. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <span
