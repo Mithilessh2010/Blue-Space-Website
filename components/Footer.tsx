@@ -104,7 +104,7 @@ export default function Footer({ onAdminTrigger }: { onAdminTrigger: () => void 
               </span>
             </div>
             <p className="text-cream/40 text-sm leading-relaxed" style={{ fontFamily: "'Barlow', sans-serif" }}>
-              A Build Guilds hackathon. May 16, 2025. Zoho Corporation, Pleasanton CA.
+              A Build Guilds hackathon. May 16, 2026. Zoho Corporation, Pleasanton CA.
             </p>
           </div>
 
