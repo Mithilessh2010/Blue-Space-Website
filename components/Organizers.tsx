@@ -12,6 +12,7 @@ const organizers = [
 
 const helpers = [
   "Sahil Singla",
+  "Soorya Balaji",
 ];
 
 export default function Organizers() {
