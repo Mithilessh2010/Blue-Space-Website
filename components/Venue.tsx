@@ -182,24 +182,47 @@ export default function Venue() {
               </div>
             </div>
 
-            {/* Embedded Google Map */}
-            <div className="relative rounded-2xl overflow-hidden border border-blue-mid/20 h-64">
+            {/* Embedded Google Map (click anywhere to open Google Maps) */}
+            <a
+              href={mapsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative block rounded-2xl overflow-hidden border border-blue-mid/20 h-64"
+              aria-label="Open Zoho Corporation location in Google Maps"
+            >
               <iframe
                 src={mapsEmbedSrc}
                 width="100%"
                 height="100%"
+                className="pointer-events-none"
                 style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) saturate(0.6) brightness(0.8)" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Zoho Corporation Location"
               />
+
+              <div className="absolute top-3 left-3 right-3 pointer-events-none">
+                <div className="inline-flex max-w-full items-center gap-2 rounded-full bg-space-900/85 px-3 py-1.5 border border-blue-mid/30 backdrop-blur-sm">
+                  <svg className="w-3.5 h-3.5 text-blue-light flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span
+                    className="text-[11px] text-cream/90 truncate"
+                    style={{ fontFamily: "'Space Mono', monospace" }}
+                  >
+                    4141 Hacienda Dr, Pleasanton, CA 94588
+                  </span>
+                </div>
+              </div>
+
               {/* Map overlay for dark theme consistency */}
               <div
-                className="absolute inset-0 pointer-events-none rounded-2xl"
+                className="absolute inset-0 pointer-events-none rounded-2xl transition-colors duration-300 group-hover:bg-blue-mid/5"
                 style={{ boxShadow: "inset 0 0 0 1px rgba(74,112,169,0.2)" }}
               />
-            </div>
+            </a>
           </motion.div>
         </div>
       </div>
