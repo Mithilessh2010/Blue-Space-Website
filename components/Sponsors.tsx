@@ -19,7 +19,7 @@ const sponsors = [
     tier: "gold",
     logo: "/images/ArtisanalMonuments.png",
     url: "https://artisanalmonuments.com/",
-    bg: "dark",
+    bg: "white",
   },
   {
     id: "easyeda",
