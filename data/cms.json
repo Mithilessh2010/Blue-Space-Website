@@ -19,6 +19,13 @@
       "url": "https://quantumrobotics.com"
     },
     {
+      "id": "7",
+      "name": "Artisanal Monuments",
+      "tier": "gold",
+      "logo": "/images/ArtisanalMonuments.png",
+      "url": "https://artisanalmonuments.com/"
+    },
+    {
       "id": "2",
       "name": "EasyEDA",
       "tier": "gold",
