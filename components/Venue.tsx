@@ -4,6 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Venue() {
+  const venueAddress = "Zoho Corporation, 4141 Hacienda Dr, Pleasanton, CA 94588";
+  const encodedVenueAddress = encodeURIComponent(venueAddress);
+  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodedVenueAddress}`;
+  const mapsEmbedSrc = `https://www.google.com/maps?q=${encodedVenueAddress}&output=embed`;
+
   return (
     <section
       id="venue"
@@ -104,7 +109,7 @@ export default function Venue() {
                     Pleasanton, CA 94588
                   </p>
                   <a
-                    href="https://maps.google.com/?q=Zoho+Corporation+4141+Hacienda+Dr+Pleasanton+CA"
+                    href={mapsLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 mt-3 text-xs text-blue-light hover:text-cream transition-colors"
@@ -180,7 +185,7 @@ export default function Venue() {
             {/* Embedded Google Map */}
             <div className="relative rounded-2xl overflow-hidden border border-blue-mid/20 h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.3374!2d-121.9149!3d37.6919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7fa3d7b3d1d1%3A0x0!2sZoho+Corporation%2C+4141+Hacienda+Dr%2C+Pleasanton%2C+CA+94588!5e0!3m2!1sen!2sus!4v1700000000000"
+                src={mapsEmbedSrc}
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) saturate(0.6) brightness(0.8)" }}
