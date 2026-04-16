@@ -4,7 +4,19 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-const sponsors = [
+type SponsorTier = "platinum" | "gold" | "silver" | "venue" | "community";
+
+type Sponsor = {
+  id: string;
+  name: string;
+  tier: SponsorTier;
+  logo: string;
+  url: string;
+  bg: "white" | "dark";
+  sponsored?: boolean;
+};
+
+const sponsors: Sponsor[] = [
   {
     id: "quantum",
     name: "Quantum Robotics",
@@ -32,7 +44,7 @@ const sponsors = [
   {
     id: "nordvpn",
     name: "NordVPN",
-    tier: "gold",
+    tier: "silver",
     logo: "/images/NordVPN_Logo_RGB_Primary_White (2).png",
     url: "https://nordvpn.com/hackathons",
     bg: "dark",
@@ -41,7 +53,7 @@ const sponsors = [
   {
     id: "nordpass",
     name: "NordPass",
-    tier: "gold",
+    tier: "silver",
     logo: "/images/NordPass-white-horizontal (2).png",
     url: "https://nordpass.com/",
     bg: "dark",
@@ -49,7 +61,7 @@ const sponsors = [
   {
     id: "incogni",
     name: "Incogni",
-    tier: "gold",
+    tier: "silver",
     logo: "/images/Incogni_logo_white_better_quality.png",
     url: "https://incogni.com/",
     bg: "dark",
@@ -57,7 +69,7 @@ const sponsors = [
   {
     id: "saily",
     name: "Saily",
-    tier: "gold",
+    tier: "silver",
     logo: "/images/saily-logo-white (3).png",
     url: "https://saily.com/",
     bg: "dark",
@@ -65,7 +77,7 @@ const sponsors = [
   {
     id: "nordprotect",
     name: "NordProtect",
-    tier: "gold",
+    tier: "silver",
     logo: "/images/Color=Orange, Type=Horizontal, On=White.png",
     url: "https://nordprotect.com/",
     bg: "white",
@@ -73,7 +85,7 @@ const sponsors = [
   {
     id: "nexosai",
     name: "Nexos.ai",
-    tier: "gold",
+    tier: "silver",
     logo: "/images/nexos-ai-logo-MAIN-white-horizontal.png",
     url: "https://nexos.ai/",
     bg: "dark",
@@ -95,14 +107,6 @@ const sponsors = [
     bg: "white",
   },
   {
-    id: "hackclub",
-    name: "Hack Club",
-    tier: "community",
-    logo: "/images/hackclub.png",
-    url: "https://hackclub.com",
-    bg: "dark",
-  },
-  {
     id: "generationxyz",
     name: "Generation XYZ",
     tier: "silver",
@@ -112,15 +116,25 @@ const sponsors = [
   },
 ];
 
-const tierConfig: Record<string, { label: string; color: string; glow: string }> = {
+const tierConfig: Record<SponsorTier, { label: string; color: string; glow: string }> = {
+  platinum: { label: "Platinum Sponsor", color: "#F7F0D9", glow: "rgba(247,240,217,0.22)" },
   gold: { label: "Gold Sponsor", color: "#F5C842", glow: "rgba(245,200,66,0.25)" },
   silver: { label: "Silver Sponsor", color: "#8FABD4", glow: "rgba(143,171,212,0.25)" },
   venue: { label: "Venue Partner", color: "#4A70A9", glow: "rgba(74,112,169,0.25)" },
   community: { label: "Community Partner", color: "#EC3750", glow: "rgba(236,55,80,0.2)" },
 };
 
+const spotlightTierOrder: SponsorTier[] = ["platinum", "gold", "silver"];
+const otherSponsors = sponsors.filter((sponsor) => sponsor.tier === "venue" || sponsor.tier === "community");
+
 export default function Sponsors() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const spotlightSections = spotlightTierOrder
+    .map((tier) => ({
+      tier,
+      sponsors: sponsors.filter((sponsor) => sponsor.tier === tier),
+    }))
+    .filter((section) => section.sponsors.length > 0);
 
   return (
     <section
@@ -190,48 +204,31 @@ export default function Sponsors() {
           </motion.p>
         </div>
 
-        {/* Gold sponsors - large */}
-        <div className="mb-8">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-xs text-yellow-400/60 tracking-[0.3em] uppercase mb-6 flex items-center gap-3"
-            style={{ fontFamily: "'Space Mono', monospace" }}
-          >
-            <span className="w-4 h-px bg-yellow-400/40" />
-            Gold Sponsors
-          </motion.p>
-          <div className="grid sm:grid-cols-2 gap-6">
-            {sponsors
-              .filter((s) => s.tier === "gold")
-              .map((sponsor, i) => (
-                <SponsorCard
-                  key={sponsor.id}
-                  sponsor={sponsor}
-                  index={i}
-                  size="large"
-                  hovered={hoveredId === sponsor.id}
-                  onHover={setHoveredId}
-                />
-              ))}
-          </div>
-        </div>
+        <div className="space-y-8">
+          {spotlightSections.map((section) => (
+            <SponsorTierSection
+              key={section.tier}
+              tier={section.tier}
+              sponsors={section.sponsors}
+              hoveredId={hoveredId}
+              onHover={setHoveredId}
+            />
+          ))}
 
-        {/* Other sponsors */}
-        <div className="grid sm:grid-cols-3 gap-5">
-          {sponsors
-            .filter((s) => s.tier !== "gold")
-            .map((sponsor, i) => (
-              <SponsorCard
-                key={sponsor.id}
-                sponsor={sponsor}
-                index={i + 2}
-                size="medium"
-                hovered={hoveredId === sponsor.id}
-                onHover={setHoveredId}
-              />
-            ))}
+          {otherSponsors.length > 0 && (
+            <SponsorTierSection
+              tier="venue"
+              title="Other"
+              subtitle="Venue and community partners that support the event behind the scenes."
+              sponsors={otherSponsors}
+              hoveredId={hoveredId}
+              onHover={setHoveredId}
+              gridClass="grid sm:grid-cols-2 gap-5"
+              cardSize="medium"
+              accentColor="#4A70A9"
+              eyebrow="Other Partners"
+            />
+          )}
         </div>
 
         {/* Become a sponsor CTA */}
@@ -269,6 +266,84 @@ export default function Sponsors() {
   );
 }
 
+function SponsorTierSection({
+  tier,
+  title,
+  subtitle,
+  sponsors,
+  hoveredId,
+  onHover,
+  gridClass,
+  cardSize,
+  accentColor,
+  eyebrow,
+}: {
+  tier: SponsorTier;
+  title?: string;
+  subtitle?: string;
+  sponsors: Sponsor[];
+  hoveredId: string | null;
+  onHover: (id: string | null) => void;
+  gridClass?: string;
+  cardSize?: "large" | "medium";
+  accentColor?: string;
+  eyebrow?: string;
+}) {
+  if (sponsors.length === 0) {
+    return null;
+  }
+
+  const config = tierConfig[tier];
+  const sectionTitle = title ?? config.label.replace(" Sponsor", " Sponsors");
+  const sectionSubtitle =
+    subtitle ??
+    (tier === "gold"
+      ? "Primary backers with the biggest placement and the strongest visual emphasis."
+      : tier === "silver"
+      ? "Supporting partners with a prominent but lighter presentation."
+      : "Additional partners and venue support.");
+
+  return (
+    <div className="rounded-[1.75rem] border border-blue-mid/15 bg-white/[0.03] p-6 sm:p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset]">
+      <motion.div
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-6"
+      >
+        <div>
+          <p
+            className="text-[10px] tracking-[0.35em] uppercase mb-3"
+            style={{ fontFamily: "'Space Mono', monospace", color: accentColor ?? config.color }}
+          >
+            {eyebrow ?? config.label}
+          </p>
+          <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-cream" style={{ fontFamily: "'Syne', sans-serif" }}>
+            {sectionTitle}
+          </h3>
+        </div>
+        <p className="text-cream/45 text-sm max-w-xl leading-relaxed" style={{ fontFamily: "'Barlow', sans-serif" }}>
+          {sectionSubtitle}
+        </p>
+      </motion.div>
+
+      <div className={gridClass ?? (tier === "silver" ? "grid sm:grid-cols-3 gap-5" : "grid sm:grid-cols-2 gap-6")}>
+        {sponsors.map((sponsor, i) => (
+          <SponsorCard
+            key={sponsor.id}
+            sponsor={sponsor}
+            index={i}
+            size={cardSize ?? (tier === "silver" ? "medium" : "large")}
+            hovered={hoveredId === sponsor.id}
+            onHover={onHover}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function SponsorCard({
   sponsor,
   index,
@@ -276,7 +351,7 @@ function SponsorCard({
   hovered,
   onHover,
 }: {
-  sponsor: (typeof sponsors)[0];
+  sponsor: Sponsor;
   index: number;
   size: "large" | "medium";
   hovered: boolean;

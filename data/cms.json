@@ -47,16 +47,9 @@
       "url": "https://zoho.com"
     },
     {
-      "id": "5",
-      "name": "Hack Club",
-      "tier": "community",
-      "logo": "/images/hackclub.png",
-      "url": "https://hackclub.com"
-    },
-    {
       "id": "6",
       "name": "Generation XYZ",
-      "tier": "gold",
+      "tier": "silver",
       "logo": "/xyz-logo-color.png",
       "url": "https://gen.xyz/"
     }
