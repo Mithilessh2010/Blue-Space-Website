@@ -55,7 +55,7 @@ export default function Footer({ onAdminTrigger }: { onAdminTrigger: () => void 
               One day. Endless builds. Come launch something.
             </p>
             <a
-              href="https://blueprint.hackclub.com/guilds/invite/dublin"
+              href="https://discord.gg/TNjUjYkB3"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-10 py-4 rounded-full font-bold text-lg overflow-hidden"

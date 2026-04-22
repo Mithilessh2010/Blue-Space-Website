@@ -231,7 +231,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://blueprint.hackclub.com/guilds/invite/dublin"
+            href="https://discord.gg/TNjUjYkB3"
             target="_blank"
             rel="noopener noreferrer"
             className="group px-8 py-4 rounded-full font-semibold text-base text-cream/80 hover:text-cream border border-cream/20 hover:border-blue-light/50 transition-all duration-300 hover:bg-blue-mid/10"
