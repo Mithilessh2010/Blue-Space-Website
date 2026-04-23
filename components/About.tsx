@@ -105,23 +105,6 @@ export default function About() {
               ))}
             </motion.div>
 
-            {/* Hack Club Blueprint badge */}
-            <motion.div
-              variants={item}
-              className="mt-10 flex items-center gap-4 glass-card rounded-2xl p-4 w-fit"
-            >
-              <div className="w-12 h-8 relative flex-shrink-0">
-                <Image src="/images/hackclub.png" alt="Hack Club" fill className="object-contain" />
-              </div>
-              <div>
-                <p className="text-xs text-blue-light/60 tracking-widest uppercase mb-0.5" style={{ fontFamily: "'Space Mono', monospace" }}>
-                  Powered by
-                </p>
-                <p className="text-sm font-bold text-cream" style={{ fontFamily: "'Syne', sans-serif" }}>
-                  Hack Club Blueprint
-                </p>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Poster image */}

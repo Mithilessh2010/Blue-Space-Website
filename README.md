@@ -92,7 +92,6 @@ All images are in `/public/images/`:
 - `easyeda.jpg` — EasyEDA logo
 - `featherless.jpeg` — Featherless.ai logo
 - `zoho.png` — Zoho logo
-- `hackclub.png` — Hack Club logo
 
 ## Customization
 
