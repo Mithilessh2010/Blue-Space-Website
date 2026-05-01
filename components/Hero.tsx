@@ -200,7 +200,7 @@ export default function Hero() {
           className="flex flex-wrap gap-4 items-center"
         >
           <a
-            href="https://discord.gg/TNjUjYkB3"
+            href="https://discord.gg/M7usdn4mgz"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative px-8 py-4 rounded-full font-bold text-base overflow-hidden"
@@ -231,7 +231,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://discord.gg/TNjUjYkB3"
+            href="https://discord.gg/M7usdn4mgz"
             target="_blank"
             rel="noopener noreferrer"
             className="group px-8 py-4 rounded-full font-semibold text-base text-cream/80 hover:text-cream border border-cream/20 hover:border-blue-light/50 transition-all duration-300 hover:bg-blue-mid/10"

@@ -65,7 +65,7 @@ export default function FAQ() {
         >
           Can't find what you're looking for?{" "}
           <a
-            href="https://discord.gg/TNjUjYkB3"
+            href="https://discord.gg/M7usdn4mgz"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-light hover:text-cream transition-colors animated-underline"
@@ -175,7 +175,7 @@ export default function FAQ() {
             </p>
           </div>
           <a
-            href="https://discord.gg/TNjUjYkB3"
+            href="https://discord.gg/M7usdn4mgz"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 px-6 py-3 rounded-full text-sm font-bold text-cream bg-[#5865F2]/20 border border-[#5865F2]/40 hover:bg-[#5865F2]/30 hover:border-[#5865F2]/60 transition-all duration-300"
