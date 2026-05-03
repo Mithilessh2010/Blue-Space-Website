@@ -152,7 +152,7 @@ export default function WhyAttend() {
           className="mt-16 flex justify-center"
         >
           <a
-            href="https://discord.gg/M7usdn4mgz"
+            href="https://discord.gg/CHnfX449"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-3 px-8 py-4 rounded-full border border-blue-mid/40 hover:border-blue-light/60 bg-blue-mid/10 hover:bg-blue-mid/20 transition-all duration-300 hover:shadow-glow-blue"
